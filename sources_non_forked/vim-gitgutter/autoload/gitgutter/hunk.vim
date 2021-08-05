@@ -508,15 +508,6 @@ function! s:close_popup_on_escape(winid, key)
 endfunction
 
 
-function! s:close_popup_on_escape(winid, key)
-  if a:key == "\<Esc>"
-    call popup_close(a:winid)
-    return 1
-  endif
-  return 0
-endfunction
-
-
 " Floating window: does not care where cursor is.
 " Preview window: assumes cursor is in preview window.
 function! s:populate_hunk_preview_window(header, body)
