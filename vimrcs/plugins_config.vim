@@ -22,14 +22,14 @@ let g:bufExplorerDefaultHelp=0
 let g:bufExplorerShowRelativePath=1
 let g:bufExplorerFindActive=1
 let g:bufExplorerSortBy='name'
-map <leader>o :BufExplorer<cr>
+map <Leader>o :BufExplorer<CR>
 
 
 """"""""""""""""""""""""""""""
 " => MRU plugin
 """"""""""""""""""""""""""""""
 let MRU_Max_Entries = 1000
-map <leader>d :MRU<CR>
+map <Leader>d :MRU<CR>
 
 
 """"""""""""""""""""""""""""""
@@ -48,10 +48,10 @@ let g:ctrlp_working_path_mode = 0
 
 " Quickly find and open a file in the current working directory
 let g:ctrlp_map = '<C-p>'
-" map <leader>j :CtrlP<cr>
+" map <Leader>j :CtrlP<CR>
 
 " Quickly find and open a buffer
-map <leader>b :CtrlPBuffer<cr>
+map <Leader>b :CtrlPBuffer<CR>
 
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
@@ -67,8 +67,8 @@ let g:user_zen_mode='a'
 """"""""""""""""""""""""""""""
 " => snipMate (beside <TAB> support <CTRL-j>)
 """"""""""""""""""""""""""""""
-ino <C-j> <C-r>=snipMate#TriggerSnippet()<cr>
-snor <C-j> <esc>i<right><C-r>=snipMate#TriggerSnippet()<cr>
+ino <C-j> <C-r>=snipMate#TriggerSnippet()<CR>
+snor <C-j> <Esc>i<Right><C-r>=snipMate#TriggerSnippet()<CR>
 let g:snipMate = { 'snippet_version' : 1 }
 
 
@@ -88,10 +88,10 @@ let g:NERDTreeWinSize=35
 let NERDTreeShowHidden=0
 let NERDTreeIgnore=['\.pyc$', '__pycache__']
 
-map <M-e> :NERDTreeToggle<cr>
-map <leader>en :NERDTreeToggle<cr>
-map <leader>eb :NERDTreeFromBookmark<Space>
-map <leader>ef :NERDTreeFind<cr>
+map <M-e> :NERDTreeToggle<CR>
+map <Leader>ee :NERDTreeToggle<CR>
+map <Leader>eb :NERDTreeFromBookmark<Space>
+map <Leader>ef :NERDTreeFind<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -114,8 +114,8 @@ let g:multi_cursor_use_default_mapping=0
 " => surround.vim config
 " Annotate strings with gettext
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-vmap Si S(i_<esc>f)
-au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
+vmap Si S(i_<Esc>f)
+au FileType mako vmap Si S"i${ _(<Esc>2f"a) }<Esc>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -148,7 +148,7 @@ let g:lightline = {
 let g:goyo_width=100
 let g:goyo_margin_top = 2
 let g:goyo_margin_bottom = 2
-nnoremap <silent> <leader>z :Goyo<cr>
+nnoremap <Silent> <Leader>z :Goyo<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -160,7 +160,7 @@ let g:ale_linters = {
 \   'go': ['go', 'golint', 'errcheck']
 \}
 
-nmap <silent> <leader>a <Plug>(ale_next_wrap)
+nmap <Silent> <Leader>a <Plug>(ale_next_wrap)
 
 " Disabling highlighting
 let g:ale_set_highlights = 0
@@ -177,8 +177,8 @@ let g:gitgutter_enabled=1
 
 set updatetime=250
 
-nnoremap <silent> <leader>hg :GitGutterToggle<cr>
-" nnoremap <silent> <leader>n
+nnoremap <Silent> <Leader>hg :GitGutterToggle<CR>
+" nnoremap <Silent> <Leader>n
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -191,6 +191,6 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " => Fugitive
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Copy the link to the line of a Git repository to the clipboard
-nnoremap <leader>v :.GBrowse!<CR>
-xnoremap <leader>v :'<'>GBrowse!<CR>
+nnoremap <Leader>v :.GBrowse!<CR>
+xnoremap <Leader>v :'<'>GBrowse!<CR>
 

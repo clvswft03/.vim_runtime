@@ -42,12 +42,12 @@ set autoread
 au FocusGained,BufEnter * checktime
 
 " With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
+" like <Leader>w saves the current file
 nnoremap <Space> <Nop>
 let mapleader = " "
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nmap <Leader>w :w!<CR>
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
@@ -198,19 +198,19 @@ set wrap "Wrap lines
 """"""""""""""""""""""""""""""
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
-vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
+vnoremap <Silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
+vnoremap <Silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-" map <space> /
+" map <Space> /
 " map <C-space> ?
 
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+" Disable highlight when <Leader><CR> is pressed
+map <Silent> <Leader><CR> :noh<CR>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
@@ -219,20 +219,20 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
+map <Leader>bd :Bclose<CR>:tabclose<CR>gT
 
 " Close all the buffers
-map <leader>ba :bufdo bd<cr>
+map <Leader>ba :bufdo bd<CR>
 
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
+map <Leader>l :bnext<CR>
+map <Leader>h :bprevious<CR>
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
-map <leader>t<leader> :tabnext
+map <Leader>tn :tabnew<CR>
+map <Leader>to :tabonly<CR>
+map <Leader>tc :tabclose<CR>
+map <Leader>tm :tabmove
+map <Leader>t<Leader> :tabnext
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
@@ -242,10 +242,10 @@ au TabLeave * let g:lasttab = tabpagenr()
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
-map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
+map <Leader>te :tabedit <C-r>=expand("%:p:h")<CR>/
 
 " Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
+map <Leader>cd :cd %:p:h<CR>:pwd<CR>
 
 " Specify the behavior when switching between buffers
 try
@@ -275,10 +275,10 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 map 0 ^
 
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+nmap <M-j> mz:m+<CR>`z
+nmap <M-k> mz:m-2<CR>`z
+vmap <M-j> :m'>+<CR>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<CR>`>my`<mzgv`yo`z
 
 if has("mac") || has("macunix")
   nmap <D-j> <M-j>
@@ -305,29 +305,29 @@ endif
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
+map <Leader>ss :setlocal spell!<CR>
 
-" Shortcuts using <leader>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
+" Shortcuts using <Leader>
+map <Leader>sn ]s
+map <Leader>sp [s
+map <Leader>sa zg
+map <Leader>s? z=
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+noremap <Leader>m mmHmt:%s/<C-V><CR>//ge<CR>'tzt'm
 
 " Quickly open a buffer for scribble
-map <leader>xx :e ~/buffer<cr>
+map <Leader>xx :e ~/buffer<CR>
 
 " Quickly open a markdown buffer for scribble
-map <leader>xm :e ~/buffer.md<cr>
+map <Leader>xm :e ~/buffer.md<CR>
 
 " Toggle paste mode on and off
-map <leader>pp :setlocal paste!<cr>
+map <Leader>pp :setlocal paste!<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -382,3 +382,4 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+
